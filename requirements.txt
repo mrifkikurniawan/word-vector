@@ -1,0 +1,14 @@
+easydict==1.9
+torchtext==0.9.0
+torch == 1.8.0
+PyYAML
+pytest==6.2.2
+pandas==1.2.4
+torchmetrics==0.3.2
+nltk==3.6.2
+gensim==4.0.0
+python-Levenshtein==0.12.2
+glove_python==0.1.0
+scikit-learn==0.24.2
+plotly==4.14.3
+matplotlib==3.3.4

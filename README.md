@@ -1,2 +1,1 @@
-# word-vector
-Word vector distributed representation trainer
+# wordvector_trainer
