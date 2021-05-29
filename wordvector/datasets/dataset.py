@@ -15,11 +15,10 @@ tokenizer = get_tokenizer('basic_english')
         
 
 class Wikipedia(Dataset):
-    def __init__(self, cache_dir: str="/media/user/DATA/my_repo/wordvector_trainer/dataset", words_count: str=None, max_corpus:int=100, **dataset_cfg):
+    def __init__(self, cache_dir: str="/media/user/DATA/my_repo/wordvector_trainer/dataset", words_count: str=None, **dataset_cfg):
         super(Wikipedia, self).__init__()
         
         self.cache_dir = cache_dir
-        self.max_corpus = max_corpus
         self.dataset = load_dataset("wikipedia", "20200501.en", cache_dir=self.cache_dir, **dataset_cfg)["train"]
         
         if words_count:
@@ -112,8 +111,6 @@ class PubMed(Dataset):
     def __iter__(self):
         self.i = 0 
         for line in self.dataset:
-            if self.i == self.max_corpus:
-                break
             line = line['text']
             tokenized, _ = preprocess(line)
             self.i += 1
