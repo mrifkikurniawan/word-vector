@@ -37,7 +37,7 @@ def plot_with_plotly(x_vals: np.ndarray, y_vals: np.ndarray, labels: np.ndarray,
         plot(data, filename='word-embedding-plot.html')
 
 
-def plot_with_matplotlib(x_vals: np.ndarray, y_vals: np.ndarray, labels: np.ndarray, 
+def plot_with_matplotlib(x_vals: np.ndarray, y_vals: np.ndarray, labels, 
                          cluster: np.ndarray):
     import matplotlib.pyplot as plt
     import random
